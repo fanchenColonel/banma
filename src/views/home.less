@@ -1,0 +1,28 @@
+#box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 72px;
+    background: skyblue;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
+content {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    height: calc(100vh - 50px - 72px);
+    background: red;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+}
