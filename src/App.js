@@ -27,8 +27,7 @@ import React, { Component } from 'react'
 import "./style.less"
 // import {Tabbar} from "./components"
 
-//git 
-
+//git is mine 
 export default class App extends Component {
   render() {
     return (
