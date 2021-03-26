@@ -21,6 +21,8 @@
 // }
 // hhh
 
+  
+
 import {mainRoute} from "./route"
 import {HashRouter,Route,Switch,Redirect} from "react-router-dom"
 import React, { Component } from 'react'
