@@ -19,7 +19,7 @@
 //     </HashRouter>
 //   );
 // }
-// 这是fjg2
+// 这是fjg
 
 
 import {mainRoute} from "./route"
