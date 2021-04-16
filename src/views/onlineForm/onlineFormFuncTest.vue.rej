@@ -1,0 +1,40 @@
+diff a/src/views/onlineForm/onlineFormFuncTest.vue b/src/views/onlineForm/onlineFormFuncTest.vue	(rejected hunks)
+@@ -765,38 +765,6 @@
+                                                 <a-modal :visible="previewVisible" :footer="null">
+                                                     <img alt="example" style="width: 100%" :src="previewImage" />
+                                                 </a-modal>
+-=======
+-                    <!-- tab切换 字段 view: "sel_depart"-->
+-                    <a-tabs v-if="JSON.stringify(tablist) !== '{}'" :default-active-key="Object.keys(tablist)[0]" @change="tabCallback">
+-                        <a-tab-pane v-for="(record, index) in tablist" :key="index" :tab="record.describe">
+-                            <template v-if="record.columns">
+-                                <div class="opabtn" v-if="formStatus == 'show' ? false : true">
+-                                    <a-button type="primary" icon="plus" class="btnn" @click="addOneRow(index)">新增</a-button>
+-                                    <a-button style="margin-left: 20px" type="primary" icon="minus" class="btnn" v-if="addSelectedRowKeys.length > 0" @click="delAddRows(index)">删除</a-button>
+-                                    <a-button style="margin-left: 20px" type="primary" icon="delete" class="delbtn" v-if="addSelectedRowKeys.length > 0" @click="clearSelectKeys">清空选择</a-button>
+-                                    
+-                                </div>
+-                                <a-table :pagination="false" :row-selection="rowSelection1" :data-source='tableDatas[index]' :columns="record.columns" :class="formStatus == 'show' ? 'form-disabled' : ''">
+-                                    <template v-for="(t, i) in record.columns" :slot="t.key" slot-scope="text, r">
+-                                        <div :key="i" >
+-                                            <span v-if="t.key == 'key'">{{text}}</span>
+-                                            <a-input allowClear v-if="t.type == 'input'" style="margin: -50px 0" :value="text" :placeholder="t.placeholder" @change="(e) => handleChange(e.target.value, r.key, t.key, index)" ></a-input>
+-                                            <a-select v-if="t.type == 'select'" :placeholder="t.placeholder" :value="text" style="width: 100%"  @change="(e) => handleSelectChange(e, r.key, t.key, index)" allowClear>
+-                                                <a-select-option v-for="op in t.options" :title="op.text" :key="op.value" :value="op.value">{{ op.text }}</a-select-option>
+-                                            </a-select>
+-                                            <div v-if="t.type == 'image'">
+-                                                <div class="clearfix">
+-                                                    <a-upload list-type="picture-card" :file-list="ImgLists" :before-upload="beforeImgUpload" :remove="handleImgRemove">
+-                                                        <div v-if="ImgLists.length < 8">
+-                                                            <a-icon type="plus" />
+-                                                            <div class="ant-upload-text">点击上传</div>
+-                                                        </div>
+-                                                    </a-upload>
+-                                                    <a-modal :visible="previewVisible" :footer="null">
+-                                                        <img alt="example" style="width: 100%" :src="previewImage" />
+-                                                    </a-modal>
+-                                                </div>
+->>>>>>> Stashed changes
+                                             </div>
+                                         </div>
+                                     </div>
